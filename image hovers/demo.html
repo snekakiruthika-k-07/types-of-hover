@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-img {
+            position: relative;
+            margin: 25px 50px 50px 50px;
+        }
+        .container-img img {
+            border-radius: 25%;
+            box-shadow: 30px 20px 10px black;
+            transition: 1.2s;
+            width: 250px;
+            height: 250px;
+        }
+        .image1:hover {
+            transform: scale(2);
+            z-index: 2;
+            cursor: pointer;
+        }
+        .image2:hover {
+            cursor: progress;
+            transform: rotate(120deg);
+        }
+        .image3:hover {
+            cursor: grabbing;
+            transform: scaleX(2);
+        }
+        .image4:hover {
+            cursor: grab;
+            transform: translateX(100%);
+        }
+        .image5:hover {
+            cursor: copy;
+            filter: grayscale(100%);
+        }
+        .captions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 25%;
+        }
+        .container-img:hover .captions {
+            opacity: 1;
+        }
+        h1 {
+            text-align: center;
+            padding: 50px;
+        }
+        body {
+            background: linear-gradient(150deg, purple, pink);
+        }
+    </style>
+</head>
+<body>
+    <h1>IMAGE GALLERY</h1>
+    <div class="container">
+        <div class="container-img">
+            <img src="9040034f5d635f46a4fb92128964fcca.jpg" alt="image not found" class="image1">
+        </div>
+        <div class="container-img">
+            <img src="close-up-of-pink-azalea-flowers-filling-frame-royalty-free-image-1709656178.jpg" alt="image not found" class="image2">
+        </div>
+        <div class="container-img">
+            <img src="close-up-of-tulips-blooming-in-field-royalty-free-image-1584131603.jpg" alt="image not found" class="image3">
+        </div>
+        <div class="container-img">
+            <img src="FYF-116.jpg" alt="image not found" class="image4">
+        </div>
+        <div class="container-img">
+            <img src="garden-rose-red-pink-56866.jpeg" alt="image not found" class="image5">
+        </div>
+        <div class="container-img">
+            <img src="sacred-lotus-gettyimages-1143403162-646fa5a441f5d.jpg" alt="image not found" class="image6">
+            <div class="captions">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, nobis!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
